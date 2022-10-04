@@ -11,30 +11,30 @@ namespace NumbersGame
         }
         private static void StartGame()                                                                 // Method for starting the game
         {
-            Console.Clear();
+            Console.Clear();                                                                            // Clears screen for cleaner look
             Console.WriteLine("Välkommen, låt oss spela ett spel. Välj svårighetsgrad mellan 1-5:");
             while (true)
             {
                 int userDifficulty = CheckIfInt();                                                      // Method for error handling
-                switch (userDifficulty)
+                switch (userDifficulty)                                                                 // Checks what difficulty user choses
                 {
                     case 1:
-                        Difficulty(1, 20, 5);
+                        Difficulty(1, 20, 5);                                                           // Difficulty 1
                         break;
                     case 2:
-                        Difficulty(1, 30, 6);
+                        Difficulty(1, 30, 6);                                                           // Difficulty 2
                         break;
                     case 3:
-                        Difficulty(1, 55, 7);
+                        Difficulty(1, 55, 7);                                                           // Difficulty 3
                         break;
                     case 4:
-                        Difficulty(1, 75, 8);
+                        Difficulty(1, 75, 8);                                                           // Difficulty 4
                         break;
                     case 5:
-                        Difficulty(1, 100, 10);
+                        Difficulty(1, 100, 10);                                                         // Difficulty 5
                         break;
                     default:
-                        Console.WriteLine("Du måste skriva ett heltal mellan 1-5");
+                        Console.WriteLine("Du måste skriva ett heltal mellan 1-5");                     // If user inputs anything besides integers 1-5
                         break;
                 }
             }
@@ -67,7 +67,7 @@ namespace NumbersGame
                     ResponseHigh();                                                                     // Method for responses when guess was too high
                 }
             }
-            Console.WriteLine("Tyvärr du lyckades inte gissa talet på {0} försök!", timesGuess);                    // Writes if the user didnt guess after (TimesGuess) tries
+            Console.WriteLine("Tyvärr du lyckades inte gissa talet på {0} försök!", timesGuess);        // Writes if the user didnt guess after (TimesGuess) tries
             EndOfGame();                                                                                // Method for the end of the game
         }
         private static void EndOfGame()                                                                 // Method for the end of the game
